@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 
 namespace JiraStatistic.Infrastructure
 {
-    internal class JiraRepository<TEntity> : IJiraRepository<TEntity> where TEntity : IHasId
+    public class JiraRepository<TEntity> : IJiraRepository<TEntity> where TEntity : IHasId
     {
         private readonly JiraDbContext _dbContext;
 
