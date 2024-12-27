@@ -7,11 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.11" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Provider\" />
+    <ProjectReference Include="..\JiraStatistic.Domain\JiraStatistic.Domain.csproj" />
+    <ProjectReference Include="..\JiraStatistic.Infrastructure\JiraStatistic.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

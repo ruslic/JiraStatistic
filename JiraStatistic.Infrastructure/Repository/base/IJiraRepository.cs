@@ -5,10 +5,10 @@ namespace JiraStatistic.Infrastructure
 {
     public interface IJiraRepository<TEntity> where TEntity : IHasId
     {
-        IQueryable<TEntity> GetAll(FindOptions? findOptions = null);
+        Task<IQueryable<TEntity>> GetAllAsync(FindOptions? findOptions = null);
 
-        TEntity FindOne(Expression<Func<TEntity, bool>> predicate);
+        Task<TEntity> FindOneAsync(Expression<Func<TEntity, bool>> predicate);
 
-        IQueryable<TEntity> Find(Expression<Func<TEntity, bool>> predicate, FindOptions? findOptions = null);
+        Task<IQueryable<TEntity>> FindAsync(Expression<Func<TEntity, bool>> predicate, FindOptions? findOptions = null);
     }
 }

@@ -12,17 +12,17 @@ namespace JiraStatistic.Infrastructure
             _dbContext = dbContext;
         }
 
-        public IQueryable<TEntity> Find(Expression<Func<TEntity, bool>> predicate, FindOptions? findOptions = null)
+        public async Task<IQueryable<TEntity>> FindAsync(Expression<Func<TEntity, bool>> predicate, FindOptions? findOptions = null)
         {
             throw new NotImplementedException();
         }
 
-        public TEntity FindOne(Expression<Func<TEntity, bool>> predicate)
+        public async Task<TEntity> FindOneAsync(Expression<Func<TEntity, bool>> predicate)
         {
             throw new NotImplementedException();
         }
 
-        public IQueryable<TEntity> GetAll(FindOptions? findOptions = null)
+        public async Task<IQueryable<TEntity>> GetAllAsync(FindOptions? findOptions = null)
         {
             throw new NotImplementedException();
         }
