@@ -1,8 +1,9 @@
 ﻿namespace JiraStatistic.Infrastructure.Entities
 {
-    public class JiraTaskEntity : IHasId
+    public class Issuestatus : IHasId
     {
         public int Id { get; set; }
-        public string Tag { get; set; }
+
+        public string Pname { get; set; }
     }
 }

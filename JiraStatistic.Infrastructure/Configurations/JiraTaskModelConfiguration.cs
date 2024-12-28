@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace JiraStatistic.Infrastructure.Configurations
 {
-    public class JiraTaskModelConfiguration : IEntityTypeConfiguration<JiraTaskEntity>
+    public class JiraTaskModelConfiguration : IEntityTypeConfiguration<JiraIssue>
     {
-        public void Configure(EntityTypeBuilder<JiraTaskEntity> builder)
+        public void Configure(EntityTypeBuilder<JiraIssue> builder)
         {
             builder.HasKey(x => x.Id);
             //builder.ToTable("");

@@ -5,7 +5,7 @@ namespace JiraStatistic.Infrastructure
 {
     public class JiraDbContext: DbContext
     {
-        public DbSet<JiraTaskEntity> JiraTasks { get; set; }
+        public DbSet<JiraIssue> JiraTasks { get; set; }
 
         public JiraDbContext(DbContextOptions<JiraDbContext> options) : base(options)
         {

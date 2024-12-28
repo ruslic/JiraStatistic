@@ -2,7 +2,7 @@
 
 namespace JiraStatistic.Infrastructure
 {
-    public class JiraTaskRepository: JiraRepository<JiraTaskEntity>, IJiraTaskRepository
+    public class JiraTaskRepository: JiraRepository<JiraIssue>, IJiraTaskRepository
     {
         public JiraTaskRepository(JiraDbContext jiraDbContext) : base(jiraDbContext) { }
     }

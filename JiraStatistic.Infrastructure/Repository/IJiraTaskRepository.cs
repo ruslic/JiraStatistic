@@ -2,7 +2,7 @@
 
 namespace JiraStatistic.Infrastructure
 {
-    public interface IJiraTaskRepository: IJiraRepository<JiraTaskEntity>
+    public interface IJiraTaskRepository: IJiraRepository<JiraIssue>
     {
 
     }
