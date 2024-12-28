@@ -13,7 +13,7 @@ namespace ReportCreator.Strategies
 {
     public class CsvReportCreator<T> : IReportCreatorStrategy<T> where T : class
     {
-        public void CreateReport(List<string> headers, List<T> statistics)
+        public void CreateReport(List<string> headers, List<T> statistics, string fileName)
         {
             try
             {
@@ -23,7 +23,7 @@ namespace ReportCreator.Strategies
                     Comment = '%'
                 };
 
-                using (var writer = new StreamWriter($"{FileName}.csv"))
+                using (var writer = new StreamWriter($"{fileName}.csv"))
                 using (var csv = new CsvWriter(writer, configuration))
                 {
                     csv.WriteRecords(statistics);

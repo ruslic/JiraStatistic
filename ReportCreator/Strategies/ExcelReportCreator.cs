@@ -8,7 +8,7 @@ namespace ReportCreator.Strategies
         static string[] ExcelColumnAlphabetIdentifiers = new string[] { "", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N",
      "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
 
-        public void CreateReport(List<string> headers, List<T> statistics)
+        public void CreateReport(List<string> headers, List<T> statistics, string fileName)
         {
             //At the start, set the license before using other APIs
             //Aspose.Cells.License Aspose_Cells_license = new Aspose.Cells.License();
@@ -47,7 +47,7 @@ namespace ReportCreator.Strategies
                 }
             }
 
-            ExcelFileWorkbook.Save($"{FileName}.xlsx");
+            ExcelFileWorkbook.Save($"{fileName}.xlsx");
         }
 
         private Dictionary<string, List<string>> GetPropertiesLists(List<T> values)

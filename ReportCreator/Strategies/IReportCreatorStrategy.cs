@@ -8,6 +8,6 @@ namespace ReportCreator.Strategies
 {
     public interface IReportCreatorStrategy<T>
     {
-        public void CreateReport(List<string> headers, List<T> statistics);
+        public void CreateReport(List<string> headers, List<T> statistics, string fileName);
     }
 }
